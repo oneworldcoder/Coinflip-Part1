@@ -2,7 +2,7 @@ var web3 = new Web3(Web3.givenProvider);
 var contractInstance;
 var contractAddress = "0x2Ae24960e9f6331e68Ef6c19b7FA15094adFdA98";
 var number;
-var guess = guess;
+var guess;
 
 $(document).ready(function() {
     window.ethereum.enable().then(function(accounts) {
