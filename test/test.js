@@ -9,7 +9,7 @@ contract("CoinFlip1", async function(accounts){
   });
 
   it("should allow owner to add Initial funds", async function() {
-    await truffleAssert.passes(instance.addBalance({value: web3.utils.toWei("1", "ether"), from: accounts[0]}));
+    await truffleAssert.passes(instance.addBalance({value: web3.utils.toWei("1", "ether"), from: accounts[2]}));
 
   });
   it("should not allow non-owner to add Initial funds", async function() {

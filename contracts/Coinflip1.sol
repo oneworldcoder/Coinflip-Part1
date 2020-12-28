@@ -12,10 +12,7 @@ contract Coinflip1 is Ownable {
 
   event result(uint value, string outcome);
 
-  modifier costs(uint cost){
-    require(msg.value > betBalance);
-    _;
-  }
+
 
   constructor() public {
     balance = 0;
@@ -25,7 +22,7 @@ contract Coinflip1 is Ownable {
     return outcome = now % 2;
   }
 
-  function flipCoin(uint number) public payable costs(betBalance) {
+  function flipCoin(uint number) public payable {
     require(number == 0 || number ==1, "Place by selecting 0 or 1");
     require(balance >= msg.value);
 
@@ -46,7 +43,7 @@ contract Coinflip1 is Ownable {
 
   }
 
-  function addBalance() public payable costs(betBalance) onlyOwner returns(uint){
+  function addBalance() public payable onlyOwner returns(uint){
     uint old_balance = balance;
     balance += msg.value;
     assert(old_balance< balance);
