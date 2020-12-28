@@ -27,7 +27,7 @@ contract Coinflip1 is Ownable {
 
   function flipCoin(uint number) public payable costs(betBalance) {
     require(number == 0 || number ==1, "Place by selecting 0 or 1");
-    require(balance > msg.value);
+    require(balance >= msg.value);
 
     deposit[msg.sender] = msg.value;
 
