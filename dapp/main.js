@@ -1,6 +1,6 @@
 var web3 = new Web3(Web3.givenProvider);
 var contractInstance;
-var contractAddress = "0xde18dB1C196853D6Dc8Ef0DEe7bD0F9A23a4bB99";
+var contractAddress = "0x6ca9c23A736b9192A8011FC41501548e996b9ad4";
 var number;
 var guess;
 
